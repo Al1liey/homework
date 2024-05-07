@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <inttypes.h>
-int32_t Npsh4ka(int16_t N, int8_t P);
+int32_t Npsh4ka(int16_t N, int16_t P);
 int main(void)
-{   int16_t N;
-    int8_t P;
-    scanf("%d %d" SCNu16 SCNu8, &N, &P);
-    printf("%d\n" PRId32, Npsh4ka(N,P));
+{   int16_t n;
+    int16_t p;
+    scanf("%" SCNd16 "%"SCNd16, &n, &p);
+    printf("%"PRId32, Npsh4ka(n,p));
 
 }
 
-int32_t Npsh4ka(int16_t N, int8_t P)
+int32_t Npsh4ka(int16_t N, int16_t P)
 {   int R = 0, k = 1;
     while (N>0)
     {

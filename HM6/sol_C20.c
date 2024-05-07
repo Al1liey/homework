@@ -9,11 +9,11 @@ int main(void)
         return 0;
     }
     printf("YES\n");
-    return 0;    
+    return 0;
 }
 int trush()
 {
-    int count = 0;
+    signed int count = 0;
     char c;
     while(c!='.')
     {
@@ -26,6 +26,11 @@ int trush()
         {
             count--;
         }
+        else if(count == -1)
+        {
+            return 0;
+        }
     }
+    printf("%d", count);
     return count;
 }

@@ -4,7 +4,7 @@ int factorial(int8_t N);
 int main(void)
 {
     int8_t N;
-    scanf("%d" SCNd8, &N);
+    scanf("%" SCNd8, &N);
     printf("%d", factorial(N));
     return 0;
 }
