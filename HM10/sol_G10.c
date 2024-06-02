@@ -13,29 +13,34 @@ int main(void)
 }
 void max_string(FILE* in, FILE* out)
 {
-    char* string;
-    char max_str[1000] = {'0'};
+    char string[1001] = "";
+    char max_str[1001] = "";
+    printf("10");
     while(fscanf(in, "%s", string) == 1)
     {
-            swap_to_max(max_str, string); 
+            printf("1");
+            if (strlen(max_str) < strlen(string))
+            {
+                strcpy(max_str, string);
+            }
     }
     max_str[strlen(max_str)] = '\0';
     fprintf(out, "%s", max_str);
 }
-void swap_to_max(char* string_1, char* string_2)
-{
-    if (strlen(string_1) < strlen(string_2))
-    {
-        int max_len = strlen(string_2);
-        for(int i = 0; i < max_len; i++)
-        {
-            swap(&string_1[i], &string_2[i]);
-        }
-    }
-}
-void swap(char* a, char* b)
-{
-    char temp = *a;
-    *a = *b;
-    *b = temp;
-}
+//~ void swap_to_max(char* string_1, char* string_2)
+//~ {
+    //~ if (strlen(string_1) < strlen(string_2))
+    //~ {
+        //~ int max_len = strlen(string_2);
+        //~ for(int i = 0; i < max_len; i++)
+        //~ {
+            //~ swap(&string_1[i], &string_2[i]);
+        //~ }
+    //~ }
+//~ }
+//~ void swap(char* a, char* b)
+//~ {
+    //~ char temp = *a;
+    //~ *a = *b;
+    //~ *b = temp;
+//~ }
